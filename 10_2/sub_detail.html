@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="initial-scale=1.0, width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTS</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pushy.css">
+    <link rel="stylesheet" href="css/swiper.min.css?v=1107">
+    <link rel="stylesheet" href="css/sub.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        $(function () {
+            $('header img.hd_icon').click(function () {
+                if ($(this).attr("src") == "images/back_close.png") {
+                    history.pushState(null, null, "#noback");
+                    $(this).attr("src", "images/back_arrow.png");
+                    $('#open_contents').hide();
+                    $('#open_pop').hide();
+                    $('#select_pop').hide();
+                }
+            });
+        });
+
+        function open_detail(id) {
+            $('#open_contents').show();
+
+            //메인헤더 아이콘변경
+            $('header img.hd_icon').attr('src', function (index, attr) {
+                if (attr.match('images/back_arrow.png')) {
+                    return attr.replace('images/back_arrow.png', 'images/back_close.png');
+                }
+            });
+
+            //스크롤 고정
+            $('#open_contents').scroll(function (e) {
+                e.preventDefault();
+                var scroll_height = $('#open_contents').scrollTop();
+                var thumb_size = $('img.typeB');
+                if (scroll_height > 260) {
+                    $('.default_info').addClass('scroll_fix');
+                    thumb_size.attr('style', thumb_size.attr('style') + '; ' + 'width:70px !important');
+                    thumb_size.attr('style', thumb_size.attr('style') + '; ' + 'height:70px !important');
+                    thumb_size.attr('style', thumb_size.attr('style') + '; ' + 'margin:10px !important');
+                    $('.scroll_area').attr('style',  $('.scroll_area').attr('style') + '; ' + 'padding-top:380px !important');
+
+                } else if (scroll_height < 260) {
+                    $('.default_info').removeClass('scroll_fix');
+                    thumb_size.attr('style', thumb_size.attr('style') + '; ' + 'width:calc(100% - 30px) !important');
+                    thumb_size.attr('style', thumb_size.attr('style') + '; ' + 'height:250px !important');
+                    thumb_size.attr('style', thumb_size.attr('style') + '; ' + 'margin:10px auto !important');
+                    $('.scroll_area').attr('style',  $('.scroll_area').attr('style') + '; ' + 'padding-top:0px !important');
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="pushy pushy-right">
+        <div class="pushy-content">
+            <ul>
+                <li class="pushy-link"><a href="index.html">홈</a></li>
+                <li class="pushy-link"><a href="sub_detail.html">상품검색</a></li>
+                <li class="pushy-link"><a href="order_list.html">발주서작성</a></li>
+                <li class="pushy-link"><a href="order_search.html">발주조회</a></li>
+                <li class="pushy-link"><a href="payment_list.html">결제관리</a></li>
+                <li class="pushy-link"><a href="login.html">로그아웃</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="container">
+        <header>
+            <a href=""><img src="images/back_arrow.png" alt="back_icon" class="hd_icon"></a>
+            <p class="page_name">상품검색</p>
+            <button class="menu-btn"></button>
+        </header>
+
+        <div class="swiper-container">
+            <ul class="slide_tab swiper-wrapper">
+                <li class="active swiper-slide">전체</li>
+                <li class="swiper-slide">카테고리1</li>
+                <li class="swiper-slide">카테고리2</li>
+                <li class="swiper-slide">카테고리3</li>
+                <li class="swiper-slide">카테고리4</li>
+                <li class="swiper-slide">카테고리5</li>
+                <li class="swiper-slide">카테고리6</li>
+            </ul>
+        </div>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 5.5,
+                spaceBetween: 5,
+            });
+        </script>
+
+        <article class="search_wrap sub_main">
+            <select name="" id="">
+                <option value="">선택</option>
+            </select>
+            <input type="search" name="search_keyword" id="search_keyword"/>
+            <input type="button">
+        </article>
+
+        <section>
+            <ul class="search_list">
+                <li>
+                    <a href="">
+                        <img src="images/typeA_thumb.png" alt='typeA_thumb' class='typeA'>
+                        <div class='right'>
+                            <p class='title black'>제품명입니다</p>
+                            <p class='per_size deep_gray'>규격<span>/ 단위</span></p>
+                            <p class='per_price'>3,000원<span>/ EA</span></p>
+                        </div>
+                    </a>
+                    <div class="btn_wrap">
+                        <input type='button' value='추가' class='add_btn blue' onclick="open_detail();">
+                        <input type='button' value='주문' class='order_btn black'>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/typeA_thumb.png" alt='typeA_thumb' class='typeA'>
+                        <div class='right'>
+                            <p class='title black'>제품명입니다</p>
+                            <p class='per_size deep_gray'>규격<span>/ 단위</span></p>
+                            <p class='per_price'>3,000원<span>/ EA</span></p>
+                        </div>
+                    </a>
+                    <div class="btn_wrap">
+                        <input type='button' value='추가' class='add_btn blue' onclick="open_detail();">
+                        <input type='button' value='주문' class='order_btn black'>
+                    </div>
+                </li>
+            </ul>
+            <div class="total_fixed blue_bg">
+                <span class="title">총 주문</span>
+                <div class="total_order">
+                    <span class="num">2 개</span>
+                    <span class="bar"> / </span>
+                    <span class="price">6,000 원</span>
+                </div>
+            </div>
+        </section>
+        <div class="open_layer" id="open_contents">
+            <div class="default_info">
+                <img src="images/typeB_thumb.png" alt="" class="typeB" id="imgThumb"/>
+                <div class="info_wrap">
+                    <ul class="left">
+                        <li id="add_info_1"><span>규격 : 150*80</span></li>
+                        <li id="add_info_2"><span>단위 : EA</span></li>
+                        <li id="add_info_3"><span>배송 : 무료배송</span></li>
+                    </ul>
+                    <div class="right">
+                        <p class="before_price">100,000</p>
+                        <p class="sale_price">80,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll_area">
+                <div class="product_info first_cont">
+                    <h4 class="title">상품설명</h4>
+                    <p class="text_area" id="goods_info">상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다상품설명입니다</p>
+                </div>
+                <div class="product_info">
+                    <h4 class="title">배송정보</h4>
+                    <p class="text_area" id="goods_info_delivery">배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.배송정보입니다.</p>
+                </div>
+            </div>
+
+            <div class="option_bottom_fixed">
+                <div class="btn_wrap">
+                    <input type="button" value="추가" class="add_btn"/>
+                    <input type="button" value="주문" class="order_btn"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/pushy.min.js"></script>
+</body>
+
+</html>

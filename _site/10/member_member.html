@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/member.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#member_photo').attr('src', e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+<header>
+    <div class="fix_layout">
+        <h1 class="logo"><a href=""><img src="images/logo_test.png" alt="logo"></a></h1>
+        <div class="today_zone">
+            <p class="name"><span>Today</span> 홍길동</p>
+            <div class="list">
+                <span><img src="images/today_icon01.png" alt="today_icon01">신규거래처</span>
+                <p class="content" data-val="개">15</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon02.png" alt="today_icon02">주문</span>
+                <p class="content" data-val="건">7</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon03.png" alt="today_icon03">금액</span>
+                <p class="content" data-val="원">1,560,000</p>
+            </div>
+        </div>
+        <ul class="menu">
+            <li class="first_depth">
+                <div><img src="images/menu01.png" alt="menu_icon" class="icon">
+                    <p class="title">기본관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="basic_company.html">회사관리</a></li>
+                    <li><a href="basic_product.html">상품관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu02.png" alt="menu_icon" class="icon">
+                    <p class="title">회원관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="member_member.html">직원관리</a></li>
+                    <li><a href="member_company.html">거래처관리</a></li>
+                    <li><a href="member_manager.html">권한관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu03.png" alt="menu_icon" class="icon">
+                    <p class="title">전자결재</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="report_sign.html">전자결재</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu04.png" alt="menu_icon" class="icon">
+                    <p class="title">상품관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="goods_add.html">상품등록</a></li>
+                    <li><a href="goods_list.html">상품목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu05.png" alt="menu_icon" class="icon">
+                    <p class="title">발주관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="order_manage.html">견적관리</a></li>
+                    <li><a href="order_write.html">견적서작성</a></li>
+                    <li><a href="order_list.html">발주목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu06.png" alt="menu_icon" class="icon">
+                    <p class="title">환경설정</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="contents">
+    <div class="title_wrap">
+        <h4>사원관리</h4>
+        <input type="button" value="저장하기"/>
+    </div>
+
+    <div class="content_wrap">
+        <div class="member_manage box-shadow">
+            <article class="member_left">
+                <div class="title_style">
+                    <h5>사원조회</h5>
+                    <input type="button" class="title_btn" value="조회하기"/>
+                </div>
+                <form >
+                    <div class="search_wrap">
+                        <div class="input_wrap">
+                            <div class="input_set">
+                                <label for="">성명</label>
+                                <input type="text" name="search_name" placeholder="사원명을 입력하세요" value="" />
+                            </div>
+                            <div class="input_set">
+                                <label for="">부서</label>
+                                <select name="search_part" id="search_part">
+                                    <option value="">:::부서를 선택하세요:::</option>
+                                </select>
+                            </div>
+                            <div class="input_set">
+                                <label for="">직급</label>
+                                <select name="search_position" id="search_position">
+                                    <option value="">:::직급을 입력하세요:::</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <table class="member_table">
+                    <thead>
+                    <tr>
+                        <th>부서</th>
+                        <th>직급</th>
+                        <th>성명</th>
+                        <th>입사일</th>
+                    </tr>
+                    </thead>
+                    <tbody class="scrollbar-macosx" id="test">
+                    <tr>
+                        <td>개발팀</td>
+                        <td>팀장</td>
+                        <td>홍길동</td>
+                        <td>2017-01-03</td>
+                    </tr>
+                    <tr>
+                        <td>인사팀</td>
+                        <td>사원</td>
+                        <td>홍길녀</td>
+                        <td>2017-11-03</td>
+                    </tr>
+                    <tr>
+                        <td>홍보팀</td>
+                        <td>사원</td>
+                        <td>홍길미</td>
+                        <td>2019-11-18</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </article>
+            <form >
+                <input type="hidden" name="id" id="id" />
+                <article class="member_right">
+                    <div class="title_style">
+                        <h5>사원등록</h5>
+                        <input type="button" class="title_btn" value="저장하기"/>
+                    </div>
+                    <div class="info_area scrollbar-macosx">
+                        <div class="line long_type auto">
+                            <label for="">사원사진</label>
+                            <input type="file" name="photo" onchange="readURL(this)" id="photo_upload">
+                            <label for="photo_upload" class="member_photo"><img src="images/member_photo.png" alt="test" id="member_photo"></label>
+                        </div>
+                        <div class="line long_type">
+                            <label for="">사원번호</label>
+                            <input type="text" name="staff_number" id="staff_number" placeholder="사원번호를 입력하세요">
+                            <div class="check_style" style="margin-left:10px;">
+                                <div class="check_wrap">
+                                    <input type="checkbox" name="staff_number_auto" id="staff_number_auto" value="Y" />
+                                    <div class="check_btn"></div>
+                                </div>
+                                <label for="staff_number_auto">자동</label>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <label for="">성명</label>
+                            <input type="text" name="name" id="name" placeholder="성명을 입력하세요">
+                        </div>
+                        <div class="line">
+                            <label for="">성별</label>
+                            <div class="radio_style">
+                                <div class="radio_wrap">
+                                    <input type="radio" name="gender" id="gender_F" value="F" />
+                                    <div class="radio_btn"></div>
+                                </div>
+                                <label for="gender_F">여자</label>
+                            </div>
+                            <div class="radio_style">
+                                <div class="radio_wrap">
+                                    <input type="radio" name="gender" id="gender_M" value="M" />
+                                    <div class="radio_btn"></div>
+                                </div>
+                                <label for="gender_M">남자</label>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <label for="">생년월일</label>
+                            <input type="text" name="birthday" id="birthday" placeholder="생년월일을 입력하세요">
+                        </div>
+                        <div class="line">
+                            <label for="">음력</label>
+                            <div class="radio_style">
+                                <div class="radio_wrap">
+                                    <input type="radio" name="lunar" id="lunar_Y" value="Y" />
+                                    <div class="radio_btn"></div>
+                                </div>
+                                <label for="lunar_Y">음력</label>
+                            </div>
+                            <div class="radio_style">
+                                <div class="radio_wrap">
+                                    <input type="radio" name="lunar" id="lunar_N" value="N" />
+                                    <div class="radio_btn"></div>
+                                </div>
+                                <label for="lunar_N">양력</label>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <label for="">입사일자</label>
+                            <input type="text" name="date_in" id="date_in" class="datepicker" placeholder="입사일자를 입력하세요">
+                        </div>
+                        <div class="line">
+                            <label for="">퇴사일자</label>
+                            <input type="text" name="date_out" id="date_out" class="datepicker" placeholder="퇴사일자를 입력하세요">
+                        </div>
+                        <div class="line">
+                            <label for="">부서</label>
+                            <select name="part_code" id="part_code">
+                                <option value="">::부서를 선택하세요::</option>
+                            </select>
+                        </div>
+                        <div class="line">
+                            <label for="">직급</label>
+                            <select name="position_code" id="position_code">
+                                <option value="">직급</option>
+                            </select>
+                        </div>
+                        <div class="line">
+                            <label for="">연락처</label>
+                            <ul class="bar_type">
+                                <li>
+                                    <select name="tel_1" id="tel_1" class="short">
+                                        <option value="02">02</option>
+                                        <option value="031">031</option>
+                                        <option value="032">032</option>
+                                        <option value="033">033</option>
+                                        <option value="041">041</option>
+                                        <option value="042">042</option>
+                                        <option value="043">043</option>
+                                        <option value="044">044</option>
+                                        <option value="051">051</option>
+                                        <option value="052">052</option>
+                                        <option value="053">053</option>
+                                        <option value="054">054</option>
+                                        <option value="055">055</option>
+                                        <option value="061">061</option>
+                                        <option value="062">062</option>
+                                        <option value="063">063</option>
+                                        <option value="064">064</option>
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                        <option value="070">070</option>
+                                        <option value="0505">0505</option>
+                                    </select>
+                                </li>
+                                <li><div class="line"></div></li>
+                                <li><input type="text" name="tel_2" id="tel_2" class="short"></li>
+                                <li><div class="line"></div></li>
+                                <li><input type="text" name="tel_3" id="tel_3" class="short"></li>
+                            </ul>
+                        </div>
+                        <div class="line">
+                            <label for="">휴대폰 번호</label>
+                            <ul class="bar_type">
+                                <li>
+                                    <select name="phone_1" id="phone_1" class="short">
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                        <option value="070">070</option>
+                                        <option value="0505">0505</option>
+                                    </select>
+                                </li>
+                                <li><div class="line"></div></li>
+                                <li><input type="text" name="phone_2" id="phone_2" class="short"></li>
+                                <li><div class="line"></div></li>
+                                <li><input type="text" name="phone_3" id="phone_3" class="short"></li>
+                            </ul>
+                        </div>
+                        <div class="line long_type">
+                            <label for="">주소</label>
+                            <div class="address">
+                                <input type="button" value="검색">
+                                <input type="hidden" name="post" id="post" readonly />
+                                <input type="text" name="address1" id="address1" placeholder="기본주소" readonly />
+                                <input type="text" name="address2" id="address2" placeholder="상세주소"class="add_two">
+                            </div>
+                        </div>
+                        <div class="line long_type">
+                            <label for="">아이디</label>
+                            <input type="text" placeholder="아이디를 입력하세요">
+                        </div>
+                        <div class="line long_type">
+                            <label for="">이메일(아이디)</label>
+                            <ul class="bar_type">
+                                <li><input type="text" name="email_id" id="email_id" class="half" /></li>
+                                <li class="mail">@</li>
+                                <li><input type="text" name="email_ad" id="email_ad" class="half" /></li>
+                                <li>
+                                    <select name="email_detail" id="email_detail" class="half">
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="daum.net">daum.net</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="line">
+                            <label for="">비밀번호</label>
+                            <input type="password" name="password" id="password" placeholder="비밀번호를 입력하세요" />
+                        </div>
+                        <div class="line">
+                            <label for="">비밀번호 확인</label>
+                            <input type="password" name="password2" id="password2" placeholder="비밀번호를 입력하세요" />
+                        </div>
+                        <div class="line auto long_type">
+                            <label for="">메모</label>
+                            <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="bottom_btn_wrap">
+                            <input type="button" value="저장하기" class="bottom_save"/>
+                        </div>
+                    </div>
+                </article>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+</body>
+
+</html>

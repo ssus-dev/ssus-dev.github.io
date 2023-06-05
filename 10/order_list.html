@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/order.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/hover.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <script>
+      $(function(){
+        $("#check").click(function(){
+          if($("#check").prop("checked")){
+            $("input[name='checked']").prop("checked",true);
+          }else{
+            $("input[name='checked']").prop("checked",false);
+          }
+        });
+        $("#check").click();
+      });
+    </script>
+</head>
+
+
+<body>
+<header>
+    <div class="fix_layout">
+        <h1 class="logo"><a href=""><img src="images/logo_test.png" alt="logo"></a></h1>
+        <div class="today_zone">
+            <p class="name"><span>Today</span> 홍길동</p>
+            <div class="list">
+                <span><img src="images/today_icon01.png" alt="today_icon01">신규거래처</span>
+                <p class="content" data-val="개">15</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon02.png" alt="today_icon02">주문</span>
+                <p class="content" data-val="건">7</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon03.png" alt="today_icon03">금액</span>
+                <p class="content" data-val="원">1,560,000</p>
+            </div>
+        </div>
+        <ul class="menu">
+            <li class="first_depth">
+                <div><img src="images/menu01.png" alt="menu_icon" class="icon">
+                    <p class="title">기본관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="basic_company.html">회사관리</a></li>
+                    <li><a href="basic_product.html">상품관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu02.png" alt="menu_icon" class="icon">
+                    <p class="title">회원관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="member_member.html">직원관리</a></li>
+                    <li><a href="member_company.html">거래처관리</a></li>
+                    <li><a href="member_manager.html">권한관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu03.png" alt="menu_icon" class="icon">
+                    <p class="title">전자결재</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="report_sign.html">전자결재</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu04.png" alt="menu_icon" class="icon">
+                    <p class="title">상품관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="goods_add.html">상품등록</a></li>
+                    <li><a href="goods_list.html">상품목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu05.png" alt="menu_icon" class="icon">
+                    <p class="title">발주관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="order_manage.html">견적관리</a></li>
+                    <li><a href="order_write.html">견적서작성</a></li>
+                    <li><a href="order_list.html">발주목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu06.png" alt="menu_icon" class="icon">
+                    <p class="title">환경설정</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="contents">
+    <div class="title_wrap">
+        <h4>발주관리</h4>
+        <!--        <input type="button" value="저장하기"/>-->
+    </div>
+
+    <div class="content_wrap">
+        <article class="search_wrap">
+            <form method="post" name="frmOrderSearch" id="frmOrderSearch">
+                <div class="title_style">
+                    <h5>검색</h5>
+                    <input type="button" value="조회하기" class="title_btn"/>
+                </div>
+                <div class="input_wrap">
+                    <div class="input_set">
+                        <label for="">거래처</label>
+                        <select name="client_user_id" id="client_user_id">
+                            <option value="">:::선택하세요:::</option>
+                        </select>
+                    </div>
+                    <div class="input_set">
+                        <label for="">발주기간</label>
+                        <div class="date_set">
+                            <input type="text" name="order_date_st" id="order_date_st" placeholder="날짜선택"/>
+                            <img src="images/date_bar.png" alt="bar">
+                            <input type="text" name="order_date_en" id="order_date_en"placeholder="날짜선택"/>
+                        </div>
+                    </div>
+                    <div class="input_set">
+                        <label for="">출고기간</label>
+                        <div class="date_set">
+                            <input type="text" name="complete_date_st" id="complete_date_st" class="datepicker" placeholder="날짜선택"/>
+                            <img src="images/date_bar.png" alt="bar">
+                            <input type="text" name="complete_date_en" id="complete_date_en" class="datepicker" placeholder="날짜선택"/>
+                        </div>
+                    </div>
+                    <div class="input_set">
+                        <label for="">담당자</label>
+                        <input type="text" name="sales_name" placeholder="영업담당자를 입력하세요">
+                    </div>
+                    <div class="input_set">
+                        <label for="">발주상태</label>
+                        <select name="status" id="status">
+                            <option value="">:::선택하세요:::</option>
+                            <option value="order">접수</option>
+                            <option value="ready">준비</option>
+                            <option value="success">출고</option>
+                            <option value="complete">완료</option>
+                            <option value="cancel">취소</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </article>
+
+        <div class="top_content box-shadow">
+            <!-- 발주리스트 -->
+            <div class="title_style">
+                <h5>발주리스트</h5>
+                <div class="right">
+                    <input type="button" class="right_title_btn" value="작업지시서 전체"/>
+                    <input type="button" class="right_title_btn" value="작업지시서 선택"/>
+                </div>
+                <ul class="top_pagination">
+                    <li class="prev"><a href="javascript://"><img src="images/prev_icon.png" alt="prev_img"></a></li>
+                    <li class="current">
+                        <select name="pageNumber" id="pageNumber">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                        <p class="total">0</p>
+                    </li>
+                    <li class="next"><a href="javascript://"><img src="images/next_icon.png" alt="next_img"></a></li>
+                </ul>
+            </div>
+            <table class="full_table">
+                <thead>
+                <tr>
+                    <th>
+                        <div class="check_style">
+                            <div class="check_wrap">
+                                <input type="checkbox" id="check">
+                                <div class="check_btn"></div>
+                            </div>
+                            <label for="">순번</label>
+                        </div>
+                    </th>
+                    <th>발주서</th>
+                    <th>상태</th>
+                    <th>재발주</th>
+                    <th>거래처</th>
+                    <th>발주일시</th>
+                    <th>발주번호</th>
+                    <th>적요</th>
+                    <th>공급가액</th>
+                    <th>부가세</th>
+                    <th>발주금액</th>
+                    <th>납기일자</th>
+                </tr>
+                </thead>
+                <tbody class="scrollbar-macosx" id="order_list">
+                <tr>
+                    <td>
+                        <div class='check_style'>
+                            <div class='check_wrap'>
+                                <input type='checkbox' name='checked' value=""/>
+                                <div class='check_btn'></div>
+                            </div>
+                            <label for="">03</label>
+                        </div>
+                    </td>
+                    <td><input type='button' value='출력' class='print_btn'/></td>
+                    <td>
+                        <p class="state ready">준비</p>
+                    </td>
+                    <td><input type='button' value='재발주' class='reorder_btn'/></td>
+                    <td>(주)거래처기업</td>
+                    <td>2019-04-22</td>
+                    <td>12345678955</td>
+                    <td>
+                        <span class='order_name' data-brandName="[코카콜라]">코카콜라 곰 모형</span>
+                        <span class='num'>20</span>
+                    </td>
+                    <td>30,000</td>
+                    <td>1,000</td>
+                    <td>450,000</td>
+                    <td>2019-05-01</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class='check_style'>
+                            <div class='check_wrap'>
+                                <input type='checkbox' name='checked' value=""/>
+                                <div class='check_btn'></div>
+                            </div>
+                            <label for="">02</label>
+                        </div>
+                    </td>
+                    <td><input type='button' value='출력' class='print_btn'/></td>
+                    <td>
+                        <p class="state complete">완료</p>
+                    </td>
+                    <td><input type='button' value='재발주' class='reorder_btn'/></td>
+                    <td>(주)거래처기업</td>
+                    <td>2019-04-22</td>
+                    <td>1234354358955</td>
+                    <td>
+                        <span class='order_name' data-brandName="[코카콜라]">코카콜라 곰인형</span>
+                        <span class='num'>20</span>
+                    </td>
+                    <td>80,000</td>
+                    <td>10,000</td>
+                    <td>800,000</td>
+                    <td>2019-05-01</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class='check_style'>
+                            <div class='check_wrap'>
+                                <input type='checkbox' name='checked' value=""/>
+                                <div class='check_btn'></div>
+                            </div>
+                            <label for="">01</label>
+                        </div>
+                    </td>
+                    <td><input type='button' value='출력' class='print_btn'/></td>
+                    <td>
+                        <p class="state order">주문</p>
+                    </td>
+                    <td><input type='button' value='재발주' class='reorder_btn'/></td>
+                    <td>(주)거래처기업</td>
+                    <td>2019-08-25</td>
+                    <td>123345435648955</td>
+                    <td>
+                        <span class='order_name' data-brandName="[코카콜라]">코카콜라 빅사이즈 </span>
+                        <span class='num'>20</span>
+                    </td>
+                    <td>10,000</td>
+                    <td>1,000</td>
+                    <td>200,000</td>
+                    <td>2019-10-01</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="bottom_area box-shadow">
+            <article class="left">
+                <div class="title_style">
+                    <h5>거래처 : <span class="name" ></span></h5>
+                </div>
+                <div class="info_wrap">
+                    <div class="line">
+                        <label for="">상호</label>
+                        <p class="text_line" >휴먼베이비</p>
+                    </div>
+                    <div class="line">
+                        <label for="">대표자</label>
+                        <p class="text_line" >홍길동</p>
+                    </div>
+                    <div class="line">
+                        <label for="">연락처</label>
+                        <p class="text_line" >010-1234-5678</p>
+                    </div>
+                    <div class="line">
+                        <label for="">업태</label>
+                        <p class="text_line">식품업</p>
+                    </div>
+                    <div class="line">
+                        <label for="">종목</label>
+                        <p class="text_line">X</p>
+                    </div>
+                    <div class="line">
+                        <label for="">이메일</label>
+                        <p class="text_line" >test@test.com</p>
+                    </div>
+                    <div class="line">
+                        <label for="">주소</label>
+                        <p class="text_line">서울특별시 강남구 영동대로 513</p>
+                    </div>
+                </div>
+                <p class="table_title">거래내역 (최근 1건)</p>
+                <table class="company_order">
+                    <thead>
+                    <tr>
+                        <th width="55px;">발주일자</th>
+                        <th width="190px">적요</th>
+                        <th width="55px">발주금액</th>
+                    </tr>
+                    </thead>
+                    <tbody id="company_order_list_lastest">
+                    <tr>
+                        <td>2019-10-01</td>
+                        <td>코카콜라 빅사이즈 상품</td>
+                        <td>500,000</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="right">
+                <div class="clk_left_detail">
+                    <div class="title_style">
+                        <div class="left_info">
+                            <p class="date" data-info="발주일자 : " id="other_date"></p>
+                            <p class="number" data-info="발주번호 : " id="other_number"></p>
+                            <p class="price" data-info="발주금액 : " id="other_price">0</p>
+                        </div>
+                        <div class="btn_wrap">
+                            <input type="button" value="재발주" class="red">
+                            <input type="button" value="닫기" class="gray_black"
+                                   onclick="$(this).parent().parent().parent().hide();">
+                        </div>
+                    </div>
+                    <table class="clk_table">
+                        <thead>
+                        <th>상품코드</th>
+                        <th>품목명</th>
+                        <th>규격</th>
+                        <th>단위</th>
+                        <th>수량</th>
+                        <th>공급단가</th>
+                        <th>부가세</th>
+                        <th>공급가</th>
+                        </thead>
+                        <tbody class="scrollbar-macosx" id="other_order_list">
+                        <tr>
+                            <td>20190717123546</td>
+                            <td><p class="order_name" data-brand="[ 브랜드명 ]">사무실테이블 자세한 내용은 길게 길게 길게요~</p></td>
+                            <td>900*100</td>
+                            <td>EA</td>
+                            <td>3</td>
+                            <td>210,000</td>
+                            <td>21,000</td>
+                            <td>231,000</td>
+                        </tr>
+                        <tr>
+                            <td>20190717123546</td>
+                            <td><p class="order_name" data-brand="[ 브랜드명 ]">사무실테이블 자세한 내용은 길게 길게 길게요~</p></td>
+                            <td>900*100</td>
+                            <td>EA</td>
+                            <td>3</td>
+                            <td>210,000</td>
+                            <td>21,000</td>
+                            <td>231,000</td>
+                        </tr>
+                        <tr>
+                            <td>20190717123546</td>
+                            <td><p class="order_name" data-brand="[ 브랜드명 ]">사무실테이블 자세한 내용은 길게 길게 길게요~</p></td>
+                            <td>900*100</td>
+                            <td>EA</td>
+                            <td>3</td>
+                            <td>210,000</td>
+                            <td>21,000</td>
+                            <td>231,000</td>
+                        </tr>
+                        <tr>
+                            <td>20190717123546</td>
+                            <td><p class="order_name" data-brand="[ 브랜드명 ]">사무실테이블 자세한 내용은 길게 길게 길게요~</p></td>
+                            <td>900*100</td>
+                            <td>EA</td>
+                            <td>3</td>
+                            <td>210,000</td>
+                            <td>21,000</td>
+                            <td>231,000</td>
+                        </tr>
+                        <tr>
+                            <td>20190717123546</td>
+                            <td><p class="order_name" data-brand="[ 브랜드명 ]">사무실테이블 자세한 내용은 길게 길게 길게요~</p></td>
+                            <td>900*100</td>
+                            <td>EA</td>
+                            <td>3</td>
+                            <td>210,000</td>
+                            <td>21,000</td>
+                            <td>231,000</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="title_style">
+                    <h5>발주상세내역</h5>
+                    <div class="btn_wrap">
+                        <div class="left">
+                            <input type="button" value="접수" id="state_order" class="red"/>
+                            <input type="button" value="준비" id="state_ready" class="green"/>
+                            <input type="button" value="출고" id="state_success" class="orange"/>
+                            <input type="button" value="완료" id="state_complete" class="blue"/>
+                            <input type="button" value="취소" id="state_cancel" class="gray_black"/>
+                            <input type="button" value="발주서" class="gray_black"/>
+                        </div>
+                        <input type="button" value="수량수정" class="title_btn"/>
+                    </div>
+                </div>
+                <form>
+                    <table class="detail_list">
+                        <thead>
+                        <tr>
+                            <th>순번</th>
+                            <th>상품코드</th>
+                            <th>품목명</th>
+                            <th>규격</th>
+                            <th>단위</th>
+                            <th>수량 [수정]</th>
+                            <th>공급단가</th>
+                            <th>부가세</th>
+                            <th>공급가</th>
+                        </tr>
+                        </thead>
+                        <tbody class="scrollbar-macosx" id="order_goods_list">
+                        <tr>
+                            <td>01</td>
+                            <td>12345678900</td>
+                            <td>
+                                <p class='order_name' data-brand='[ 코카콜라 ]'>빅사이즈 pet형</p>
+                            </td>
+                            <td>5L</td>
+                            <td>EA</td>
+                            <td>
+                                <div class="quantity">
+                                    <div class="quantity-nav">
+                                        <div class="quantity-button quantity-down">-</div>
+                                        <input type='number' name='goods_count[]' min='1' value="1" step='1' readonly />
+                                        <div class="quantity-button quantity-up">+</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>3,000</td>
+                            <td>300</td>
+                            <td>3,300</td>
+                        </tr>
+                        <script>
+                            $(".quantity").each(function() {
+                                var spinner = $(this),
+                                    input = spinner.find("input[type='number']"),
+                                    btnUp = spinner.find(".quantity-up"),
+                                    btnDown = spinner.find(".quantity-down"),
+                                    min = input.attr('min'),
+                                    max = input.attr('max');
+
+                                btnUp.click(function() {
+                                    var oldValue = parseFloat(input.val());
+                                    if (oldValue >= max) {
+                                        var newVal = oldValue;
+                                    } else {
+                                        var newVal = oldValue + 1;
+                                    }
+                                    spinner.find("input").val(newVal);
+                                    spinner.find("input").trigger("change");
+                                });
+
+                                btnDown.click(function() {
+                                    var oldValue = parseFloat(input.val());
+                                    if (oldValue <= min) {
+                                        var newVal = oldValue;
+                                    } else {
+                                        var newVal = oldValue - 1;
+                                    }
+                                    spinner.find("input").val(newVal);
+                                    spinner.find("input").trigger("change");
+                                });
+                            });
+                        </script>
+                        </tbody>
+                    </table>
+                </form>
+                <div class="fixed_total_wrap">
+                    <p class="blue">총 계</p>
+                    <ul class="price_list">
+                        <li>3,000</li>
+                        <li>300</li>
+                        <li>3,300</li>
+                    </ul>
+                </div>
+
+            </article>
+        </div>
+    </div>
+</section>
+
+</body>
+
+</html>

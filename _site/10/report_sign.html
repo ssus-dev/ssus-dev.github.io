@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sign.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+</head>
+
+
+<body>
+<header>
+    <div class="fix_layout">
+        <h1 class="logo"><a href=""><img src="images/logo_test.png" alt="logo"></a></h1>
+        <div class="today_zone">
+            <p class="name"><span>Today</span> 홍길동</p>
+            <div class="list">
+                <span><img src="images/today_icon01.png" alt="today_icon01">신규거래처</span>
+                <p class="content" data-val="개">15</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon02.png" alt="today_icon02">주문</span>
+                <p class="content" data-val="건">7</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon03.png" alt="today_icon03">금액</span>
+                <p class="content" data-val="원">1,560,000</p>
+            </div>
+        </div>
+        <ul class="menu">
+            <li class="first_depth">
+                <div><img src="images/menu01.png" alt="menu_icon" class="icon">
+                    <p class="title">기본관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="basic_company.html">회사관리</a></li>
+                    <li><a href="basic_product.html">상품관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu02.png" alt="menu_icon" class="icon">
+                    <p class="title">회원관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="member_member.html">직원관리</a></li>
+                    <li><a href="member_company.html">거래처관리</a></li>
+                    <li><a href="member_manager.html">권한관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu03.png" alt="menu_icon" class="icon">
+                    <p class="title">전자결재</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="report_sign.html">전자결재</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu04.png" alt="menu_icon" class="icon">
+                    <p class="title">상품관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="goods_add.html">상품등록</a></li>
+                    <li><a href="goods_list.html">상품목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu05.png" alt="menu_icon" class="icon">
+                    <p class="title">발주관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="order_manage.html">견적관리</a></li>
+                    <li><a href="order_write.html">견적서작성</a></li>
+                    <li><a href="order_list.html">발주목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu06.png" alt="menu_icon" class="icon">
+                    <p class="title">환경설정</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="contents">
+    <div class="title_wrap">
+        <h4>전자결재</h4>
+        <input type="button" value="저장하기"/>
+    </div>
+
+    <div class="content_wrap">
+        <div class="sign_wrap box-shadow">
+            <div class="sign_left">
+                <div class="title_style">
+                    <h5>전자결재 목록</h5>
+                    <input type="button" class="title_btn" value="조회">
+                </div>
+                <div class="search_wrap">
+                    <div class="input_wrap">
+                        <div class="input_set">
+                            <label for="">검색어</label>
+                            <input type="text" placeholder="검색어를 입력하세요">
+                        </div>
+                        <div class="input_set">
+                            <label for="">진행상태</label>
+                            <select name="" id="">
+                                <option value="작성중">작성중</option>
+                                <option value="접수">접수</option>
+                                <option value="결재중">결재중</option>
+                                <option value="결재완료">결재완료</option>
+                                <option value="반려">반려</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <table class="sign_table">
+                    <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>제목</th>
+                        <th>일자</th>
+                        <th>상태</th>
+                    </tr>
+                    </thead>
+                    <tbody class="scrollbar-macosx">
+                    <tr>
+                        <td>품의</td>
+                        <td>업무효율 증진방안</td>
+                        <td>2019-07-23</td>
+                        <td>
+<!--                            <p class="state red">접수</p>-->
+<!--                            <p class="state green">준비</p>-->
+<!--                            <p class="state blue">결재중</p>-->
+                            <p class="state gray_black">결재완료</p>
+<!--                            <p class="state deep_black">반려</p>-->
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sign_center">
+                <div class="title_style">
+                    <h5>결재문서 작성</h5>
+                    <input type="button" class="title_btn" value="추가">
+                </div>
+                <ul class="document_list scrollbar-macosx">
+                    <li>
+<!--                        <p class="state red">접수</p>-->
+<!--                        <p class="state green">준비</p>-->
+<!--                       <p class="state blue">결재중</p>-->
+                        <p class="state gray_black">결재완료</p>
+<!--                        <p class="state deep_black">반려</p>-->
+                        <p class="title">업무효율 증진방안ㄹㄴㄴㄹㅇ</p>
+                        <p class="type">견적</p>
+                        <input type="button" value="결재하기" class="document_open">
+                    </li>
+                    <li>
+<!--                    <p class="state red">접수</p>-->
+<!--                    <p class="state green">준비</p>-->
+<!--                    <p class="state blue">결재중</p>-->
+                        <p class="state gray_black">결재완료</p>
+<!--                        <p class="state deep_black">반려</p>-->
+                        <p class="title">업무효율 증진방안ㄹㄴㄴㄹㅇ</p>
+                        <p class="type">견적</p>
+                        <input type="button" value="결재하기" class="document_open">
+                    </li>
+                </ul>
+            </div>
+            <div class="sign_right">
+                <div class="title_style">
+                    <h5>결재서 작성</h5>
+                    <input type="button" class="title_btn" value="상신">
+                </div>
+                <div class="scrollbar-macosx">
+                    <ul class="top_sign_select">
+                        <li>
+<!--                        type1::: 처음 기본 세팅-->
+                            <div class="plus" onclick="$('.member_layer').show();">
+                                <p class="add_text">담당자 선택</p>
+                                <img src="images/add_sign_bg.png" alt="add_img" class="add_btn">
+                            </div>
+                            <div class="member_layer">
+                                <div class="title">
+                                    <p>회원리스트</p>
+                                    <img src="images/layer_close.png" alt="layer_close" onclick="$(this).parent().parent().hide();">
+                                </div>
+                                <ul class="member_list">
+                                    <li data-grade="회장">홍길동</li>
+                                    <li data-grade="부회장">홍길동2</li>
+                                    <li data-grade="팀장">홍길동3</li>
+                                    <li data-grade="사원">홍길동4</li>
+                                    <li data-grade="과장">홍길동5</li>
+                                    <li data-grade="부장">홍길동6</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+<!--                        type2::: 결재담당자 선택 후-->
+                            <div class="sign">
+                                <p class="grade">회장</p>
+                                <p class="name">홍길동</p>
+                                <p class="date">2019.07.31</p>
+                            </div>
+                        </li>
+                        <li>
+<!--                        type3::: 결재버튼 생성-->
+                            <div class="sign">
+                                <p class="grade">회장</p>
+                                <p class="name">홍길동</p>
+                                <input type="button" value="결재하기">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="select_radio_area">
+                        <p class="title">결재구분</p>
+                        <div class="radio_style">
+                            <div class="radio_wrap">
+                                <input type="radio" name="test">
+                                <div class="radio_btn"></div>
+                            </div>
+                            <label for="">품의</label>
+                        </div>
+                        <div class="radio_style">
+                            <div class="radio_wrap">
+                                <input type="radio" name="test">
+                                <div class="radio_btn"></div>
+                            </div>
+                            <label for="">견적</label>
+                        </div>
+                        <div class="radio_style">
+                            <div class="radio_wrap">
+                                <input type="radio" name="test">
+                                <div class="radio_btn"></div>
+                            </div>
+                            <label for="">기안</label>
+                        </div>
+                        <div class="radio_style">
+                            <div class="radio_wrap">
+                                <input type="radio" name="test">
+                                <div class="radio_btn"></div>
+                            </div>
+                            <label for="">지출</label>
+                        </div>
+                    </div>
+                    <div class="title_input">
+                        <input type="text">
+                    </div>
+                    <div class="editor_wrap">
+
+                    </div>
+<!--                    <div class="add_file">-->
+<!--                        <input type="file">-->
+<!--                        <label for=""></label>-->
+<!--                    </div>-->
+                    <div class="bottom_btn_wrap">
+                        <input type="button" value="상신" class="bottom_save">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/member.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+</head>
+
+
+<body>
+<header>
+    <div class="fix_layout">
+        <h1 class="logo"><a href=""><img src="images/logo_test.png" alt="logo"></a></h1>
+        <div class="today_zone">
+            <p class="name"><span>Today</span> 홍길동</p>
+            <div class="list">
+                <span><img src="images/today_icon01.png" alt="today_icon01">신규거래처</span>
+                <p class="content" data-val="개">15</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon02.png" alt="today_icon02">주문</span>
+                <p class="content" data-val="건">7</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon03.png" alt="today_icon03">금액</span>
+                <p class="content" data-val="원">1,560,000</p>
+            </div>
+        </div>
+        <ul class="menu">
+            <li class="first_depth">
+                <div><img src="images/menu01.png" alt="menu_icon" class="icon">
+                    <p class="title">기본관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="basic_company.html">회사관리</a></li>
+                    <li><a href="basic_product.html">상품관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu02.png" alt="menu_icon" class="icon">
+                    <p class="title">회원관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="member_member.html">직원관리</a></li>
+                    <li><a href="member_company.html">거래처관리</a></li>
+                    <li><a href="member_manager.html">권한관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu03.png" alt="menu_icon" class="icon">
+                    <p class="title">전자결재</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="report_sign.html">전자결재</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu04.png" alt="menu_icon" class="icon">
+                    <p class="title">상품관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="goods_add.html">상품등록</a></li>
+                    <li><a href="goods_list.html">상품목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu05.png" alt="menu_icon" class="icon">
+                    <p class="title">발주관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="order_manage.html">견적관리</a></li>
+                    <li><a href="order_write.html">견적서작성</a></li>
+                    <li><a href="order_list.html">발주목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu06.png" alt="menu_icon" class="icon">
+                    <p class="title">환경설정</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="contents">
+    <div class="title_wrap">
+        <h4>권한관리</h4>
+        <input type="button" value="저장하기"/>
+    </div>
+
+    <div class="content_wrap">
+        <div class="manage box-shadow">
+            <div class="manage_left">
+                <div class="title_style">
+                    <h5>권한조회</h5>
+                    <input type="button" class="title_btn" value="조회하기">
+                </div>
+                <form>
+                    <div class="search_wrap">
+                        <div class="input_wrap">
+                            <div class="input_set">
+                                <label for="">권한명</label>
+                                <input type="text" name="permit" id="permit" placeholder="권한명을 입력해주세요">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <table class="manage_table">
+                    <thead>
+                    <tr>
+                        <th>권한명칭</th>
+                        <th>사용자수</th>
+                        <th>생성일자</th>
+                    </tr>
+                    </thead>
+                    <tbody class="scrollbar-macosx">
+                    <tr>
+                        <td>관리자 권한</td>
+                        <td>1</td>
+                        <td>2019-08-08</td>
+                    </tr>
+                    <tr>
+                        <td>수정 권한</td>
+                        <td>3</td>
+                        <td>2019-10-08</td>
+                    </tr>
+                    <tr>
+                        <td>삭제 권한(Master)</td>
+                        <td>1</td>
+                        <td>2019-11-08</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <form>
+                <input type="hidden" name="id" id="id" />
+                <div class="manage_center">
+                    <div class="title_style">
+                        <h5>권한설정<span class="red">권한에 맞는 정보를 선택하세요</span></h5>
+                    </div>
+                    <div class="search_wrap">
+                        <div class="input_wrap">
+                            <div class="input_set">
+                                <label for="">별칭</label>
+                                <input type="text" name="permit_name" id="permit_name" placeholder="별칭을 입력해주세요"/>
+                                <input type="button" value="저장"/>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="manage_check_table">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>보기</th>
+                            <th>작성</th>
+                            <th>수정</th>
+                            <th>삭제</th>
+                        </tr>
+                        </thead>
+                        <tbody class="scrollbar-macosx" id="list_permit">
+                            <tr>
+                                <td>삭제</td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>수정하기</td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>초대기능</td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class='check_style'>
+                                        <div class='check_wrap'>
+                                            <input type='checkbox'/>
+                                            <div class='check_btn'></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+
+            <div class="manage_right">
+                <div class="title_style">
+                    <h5>권한설정<span class="red">권한에 맞는 정보를 선택하세요</span></h5>
+                </div>
+                <div class="search_wrap">
+                    <div class="input_wrap">
+                        <div class="input_set">
+                            <label for="">별칭</label>
+                            <input type="text" value="최고관리자" readonly="readonly">
+                        </div>
+                    </div>
+                </div>
+                <table class="manage_detail_table">
+                    <thead>
+                    <tr>
+                        <th>부서</th>
+                        <th>직급</th>
+                        <th>성명</th>
+                        <th>
+                            <select name="" id="">
+                                <option value="">::선택하세요::</option>
+                            </select>
+                        </th>
+                        <th>입사일</th>
+                        <th>변경</th>
+                    </tr>
+                    </thead>
+                    <tbody class="scrollbar-macosx" id="list_user">
+                        <tr>
+                            <td>개발팀</td>
+                            <td>부장</td>
+                            <td>김부장</td>
+                            <td>
+                                <select >
+                                    <option value=''>::선택하세요::</option>
+                                </select>
+                            </td>
+                            <td>2011-06-07</td>
+                            <td><input type='button' class='title_btn' value='변경'/></td>
+                        </tr>
+                        <tr>
+                            <td>개발팀</td>
+                            <td>과장</td>
+                            <td>이과장</td>
+                            <td>
+                                <select >
+                                    <option value=''>::선택하세요::</option>
+                                </select>
+                            </td>
+                            <td>2010-02-07</td>
+                            <td><input type='button' class='title_btn' value='변경'/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+
+</html>

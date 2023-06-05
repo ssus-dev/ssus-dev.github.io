@@ -1,0 +1,66 @@
+.sign_wrap{width:100%;background: #fff;border-radius: 5px;border:1px solid #eaeaea;height:100%;}
+.sign_wrap .search_wrap{width:100%;border:none!important;}
+/*left*/
+.sign_wrap .sign_left{width:300px;float:left;border-right:1px solid #eaeaea;height:100%;}
+.sign_table{width: calc(100% - 20px);box-sizing: border-box;margin:0 auto;table-layout: fixed;}
+.sign_table thead{float:left; width:100%;}
+.sign_table tbody{overflow-y:auto; overflow-x:hidden;float:left; width:100%;}
+.sign_table .scroll-wrapper>.scroll-content{height:510px!important;}
+.sign_table tbody tr{display:table; width:100%;}
+.sign_table tbody tr td p.state{line-height:20px;height:20px;display:inline-block;font-size:11px;padding:0px 2px;}
+.sign_table tr td:nth-of-type(1),.sign_table tr th:nth-of-type(1){width:40px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.sign_table tr td:nth-of-type(2),.sign_table tr th:nth-of-type(2){width:120px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.sign_table tr td:nth-of-type(3),.sign_table tr th:nth-of-type(3){width:70px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.sign_table tr td:nth-of-type(4),.sign_table tr th:nth-of-type(4){width:50px;float: left;text-overflow: ellipsis;overflow: hidden;}
+/*state*/
+p.red{border:1px solid #e9635c;border-radius:100px;}
+p.green{border:1px solid #2ac774;border-radius:100px;}
+p.blue{border:1px solid #5a95dd;border-radius:100px;}
+p.deep_black{border:1px solid #272727;border-radius:100px;}
+p.gray_black{border:1px solid #5e5e5e;border-radius:100px;}
+
+/*center*/
+.sign_wrap .sign_center{width:150px;float:left;border-right:1px solid #eaeaea;height:100%;}
+.sign_center .scroll-wrapper>.scroll-content{height:610px!important;}
+.sign_wrap .sign_center ul.document_list{width: 100%;box-sizing:border-box;}
+.sign_wrap .sign_center ul.document_list li{width:95%;box-sizing:border-box;border:1px solid #eaeaea;padding:5px;margin:0 auto 10px;}
+.sign_wrap .sign_center ul.document_list li p.state{border-radius: 100px;font-size:11px;height:16px;line-height: 16px;border:1px solid;width:50px;text-align:center;}
+.sign_wrap .sign_center ul.document_list li p.title,.sign_wrap .sign_center ul.document_list li p.type{width: 100%;-ms-text-overflow: ellipsis;text-overflow: ellipsis;overflow:hidden;white-space: nowrap;height:20px;font-size:12px;color:#272727;line-height: 20px;margin:5px 0px;}
+.sign_wrap .sign_center ul.document_list li p.title::before{content:"제목";margin-right:5px;}
+.sign_wrap .sign_center ul.document_list li p.type::before{content:"구분";margin-right:5px;}
+.sign_wrap .sign_center ul.document_list li input[type="button"]{width:100%;height:20px;line-height: 20px;border-radius:3px;background:#5a95dd;color:#fff;}
+/*right*/
+.sign_wrap .sign_right{width:calc(100% - 460px);float:left;height:100%;}
+.sign_wrap .sign_right .scroll-wrapper>.scroll-content{height:610px!important;}
+.sign_wrap .sign_right ul.top_sign_select{width:calc(100% - 20px);margin:0 auto 10px;box-sizing: border-box;height:70px;border-radius:3px;}
+.sign_wrap .sign_right ul.top_sign_select li{width:70px;float:left;box-sizing:border-box;border:1px solid #b9b9b9;height:70px;margin-left:-1px;}
+/* 담당자 선택 */
+.sign_wrap .sign_right ul.top_sign_select li div.plus{width:70px;height:70px;box-sizing:border-box;float:left;cursor:pointer;}
+.sign_wrap .sign_right ul.top_sign_select li div.plus .add_text{width:100%;font-size:12px;color:#5a95dd;text-align:center;height:15px;margin-top:10px;}
+.sign_wrap .sign_right ul.top_sign_select li div.plus img.add_btn{width:60px;height:60px;display:block;margin:-10px auto 0px!important;cursor: pointer;}
+/* 결재 담당자 선택 후*/
+.sign_wrap .sign_right ul.top_sign_select li div.sign p.grade{font-size:11px;text-align:left;color:#5a95dd;height:17px;float:left;border-bottom:1px solid #b9b9b9;width:100%;line-height:17px;}
+.sign_wrap .sign_right ul.top_sign_select li div.sign p.name{font-size:16px;text-align:center;color:#333333;float:left;width:100%;margin-bottom:10px;height:20px;}
+.sign_wrap .sign_right ul.top_sign_select li div.sign p.date{width:100%;height:15px;line-height:15px;font-size:12px;color:#5e5e5e;text-align:center;border-top:1px solid #b9b9b9;float:left;}
+.sign_wrap .sign_right ul.top_sign_select li div.sign input[type="button"]{width:100%;display:block;height:20px;background: #555;color:#fff;text-align:center;border-radius:0px;float:left;}
+
+/*member_layer*/
+.sign_wrap .sign_right ul.top_sign_select .member_layer{width:140px;background: #fff;border-radius:5px;border:1px solid #b9b9b9;position:relative;float:left;padding:5px;z-index:999999;display:none;}
+.sign_wrap .sign_right ul.top_sign_select .member_layer .title{width:100%;height:25px;margin-bottom:5px;border-bottom:1px solid #b9b9b9;}
+.sign_wrap .sign_right ul.top_sign_select .member_layer .title p{float:left;font-size:14px;color:#333333;line-height:25px;}
+.sign_wrap .sign_right ul.top_sign_select .member_layer .title img{float:right;cursor: pointer;width:18px;height:18px;}
+.sign_wrap .sign_right ul.top_sign_select .member_layer li{width:100%;height:25px;float:left;border-bottom:1px solid #eaeaea !important;color:#555;box-shadow: none;border:none;font-size:12px;border-radius:0px;cursor: pointer;line-height:25px;}
+.sign_wrap .sign_right ul.top_sign_select .member_layer li::before{content:attr(data-grade);margin-right:5px;width:60px;float:left;color:#5e5e5e;}
+.sign_wrap .sign_right ul.top_sign_select .member_layer li:hover{background: #d8e5ff;}
+
+
+
+.sign_wrap .sign_right .select_radio_area{width: calc(100% - 20px);height:40px;border:1px solid #b9b9b9;box-sizing:border-box;margin:10px 0px;padding:0px 10px;margin:0 auto;}
+.sign_wrap .sign_right .select_radio_area p{width:80px;float:left;line-height: 40px;font-size:12px;}
+.sign_wrap .sign_right .select_radio_area .radio_style{width:60px;height:40px;float:left;}
+.sign_wrap .sign_right .select_radio_area .radio_style label{line-height: 40px;}
+.sign_wrap .sign_right .select_radio_area .radio_style .radio_wrap{margin-top:12px!important;}
+.sign_wrap .sign_right .title_input{width: calc(100% - 20px);height:35px;border:1px solid #b9b9b9;box-sizing:border-box;margin:10px auto;padding:0px 10px;}
+.sign_wrap .sign_right .title_input::before{content:"제목 : ";margin-right:10px;font-size:12px;line-height: 30px; float: left;width:30px;}
+.sign_wrap .sign_right .title_input input[type="text"]{width:calc(100% - 40px);display: block;border-bottom:1px solid #eaeaea;float:left;background: transparent;height:25px;}
+.sign_wrap .sign_right .editor_wrap{width:calc(100% - 20px);height:350px;border:1px solid #b9b9b9;box-sizing:border-box;margin:10px auto;padding:0px 10px;}

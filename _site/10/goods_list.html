@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/hover.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function(){
+        $("#check").click(function(){
+          if($("#check").prop("checked")){
+            $("input[name='checked']").prop("checked",true);
+          }else{
+            $("input[name='checked']").prop("checked",false);
+          }
+        });
+        $("#check").click();
+      });
+    </script>
+</head>
+
+
+<body>
+<header>
+    <div class="fix_layout">
+        <h1 class="logo"><a href=""><img src="images/logo_test.png" alt="logo"></a></h1>
+        <div class="today_zone">
+            <p class="name"><span>Today</span> 홍길동</p>
+            <div class="list">
+                <span><img src="images/today_icon01.png" alt="today_icon01">신규거래처</span>
+                <p class="content" data-val="개">15</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon02.png" alt="today_icon02">주문</span>
+                <p class="content" data-val="건">7</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon03.png" alt="today_icon03">금액</span>
+                <p class="content" data-val="원">1,560,000</p>
+            </div>
+        </div>
+        <ul class="menu">
+            <li class="first_depth">
+                <div><img src="images/menu01.png" alt="menu_icon" class="icon">
+                    <p class="title">기본관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="basic_company.html">회사관리</a></li>
+                    <li><a href="basic_product.html">상품관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu02.png" alt="menu_icon" class="icon">
+                    <p class="title">회원관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="member_member.html">직원관리</a></li>
+                    <li><a href="member_company.html">거래처관리</a></li>
+                    <li><a href="member_manager.html">권한관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu03.png" alt="menu_icon" class="icon">
+                    <p class="title">전자결재</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="report_sign.html">전자결재</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu04.png" alt="menu_icon" class="icon">
+                    <p class="title">상품관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="goods_add.html">상품등록</a></li>
+                    <li><a href="goods_list.html">상품목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu05.png" alt="menu_icon" class="icon">
+                    <p class="title">발주관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="order_manage.html">견적관리</a></li>
+                    <li><a href="order_write.html">견적서작성</a></li>
+                    <li><a href="order_list.html">발주목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu06.png" alt="menu_icon" class="icon">
+                    <p class="title">환경설정</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="contents">
+    <div class="title_wrap">
+        <h4>상품관리</h4>
+<!--        <input type="button" value="저장하기"/>-->
+    </div>
+
+    <div class="content_wrap">
+        <form >
+            <article class="search_wrap box-shadow">
+                <div class="title_style">
+                    <h5>검색</h5>
+                    <input type="button" value="조회하기" class="title_btn"/>
+                </div>
+                <div class="input_wrap">
+                    <div class="input_set">
+                        <label for="">상품코드</label>
+                        <input type="text" name="searchCode" id="searchCode" value="" placeholder="상품코드를 입력하세요">
+                    </div>
+                    <div class="input_set">
+                        <label for="">상품명</label>
+                        <input type="text" name="searchName" id="searchName" value="" placeholder="상품명을 입력하세요">
+                    </div>
+                    <div class="input_set">
+                        <label for="">과/면세</label>
+                        <select name="searchTaxCodeId" id="searchTaxCodeId">
+                            <option value="">:::전체:::</option>
+                        </select>
+                    </div>
+                    <div class="input_set">
+                        <label for="">판매상태</label>
+                        <select name="searchStatusCodeId" id="searchStatusCodeId">
+                            <option value="">:::전체:::</option>
+                        </select>
+                    </div>
+                    <div class="input_set">
+                        <label for="">재고유무</label>
+                        <div class="radio_area">
+                            <div class="radio_style">
+                                <div class="radio_wrap">
+                                    <input type="radio" name="searchStock" id="searchStock_1" value="1" />
+                                    <div class="radio_btn"></div>
+                                </div>
+                                <label for="searchStock_1">재고있음</label>
+                            </div>
+                            <div class="radio_style">
+                                <div class="radio_wrap">
+                                    <input type="radio" name="searchStock" id="searchStock_0" value="0" />
+                                    <div class="radio_btn"></div>
+                                </div>
+                                <label for="searchStock_0">재고없음</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </form>
+        <article class="product_manage box-shadow">
+            <div class="title_style">
+                <h5>상품리스트</h5>
+            </div>
+            <table class="product_manage_table">
+                <thead>
+                <tr>
+                    <th>
+                        <div class="check_style">
+                            <div class="check_wrap">
+                                <input type="checkbox" id="check">
+                                <div class="check_btn"></div>
+                            </div>
+                            <label for="">순번</label>
+                        </div>
+                    </th>
+                    <th>수정</th>
+                    <th>삭제</th>
+                    <th>이미지</th>
+                    <th>상품코드</th>
+                    <th>상품명</th>
+                    <th>정상가</th>
+                    <th>공급가</th>
+                    <th>규격</th>
+                    <th>단위</th>
+                    <th>재고</th>
+                    <th>과/면세</th>
+                    <th>상태</th>
+                </tr>
+                </thead>
+                <tbody class="scrollbar-macosx">
+                <tr onclick="">
+                    <td>
+                        <div class="check_style">
+                            <div class="check_wrap">
+                                <input type="checkbox" name="checked" value="">
+                                <div class="check_btn"></div>
+                            </div>
+                            <label for="">3</label>
+                        </div>
+                    </td>
+                    <td><input type="button" value="수정" class="gray_black"/></td>
+                    <td><input type="button" value="삭제" class="red" onclick="goDel('{{ data.id }}',this)" /></td>
+                    <td ><img src="images/img_default.png" alt=""></td>
+                    <td>156566558855663</td>
+                    <td>스타벅스 3인 쇼파체어</td>
+                    <td>320,000</td>
+                    <td>300,000</td>
+                    <td>180*50</td>
+                    <td>EA</td>
+                    <td>30</td>
+                    <td>과세</td>
+                    <td>판매가능</td>
+                </tr>
+                <tr onclick="">
+                    <td>
+                        <div class="check_style">
+                            <div class="check_wrap">
+                                <input type="checkbox" name="checked" value="">
+                                <div class="check_btn"></div>
+                            </div>
+                            <label for="">2</label>
+                        </div>
+                    </td>
+                    <td><input type="button" value="수정" class="gray_black"/></td>
+                    <td><input type="button" value="삭제" class="red" onclick="goDel('{{ data.id }}',this)" /></td>
+                    <td ><img src="images/img_default.png" alt=""></td>
+                    <td>155435435666</td>
+                    <td>탐앤탐스 1인 체어</td>
+                    <td>80,000</td>
+                    <td>80,000</td>
+                    <td>80*50</td>
+                    <td>EA</td>
+                    <td>10</td>
+                    <td>과세</td>
+                    <td>판매가능</td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+
+    </div>
+</section>
+
+</body>
+
+</html>

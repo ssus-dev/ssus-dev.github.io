@@ -1,0 +1,93 @@
+/***********상품구분***********/
+.member_manage,.company_manage{width: 100%;border-radius: 5px;border:1px solid #eaeaea;background: #fff;float: left;box-sizing: border-box;height:100%;}
+.member_manage .member_left{width: 300px;border-right: 1px solid #eaeaea;float: left;box-sizing: border-box;height:100%;}
+.member_manage .member_left .search_wrap,.company_manage .company_left .search_wrap{float: left;width: 100%;box-sizing: border-box;border-radius: 0px;border-bottom:1px solid #eaeaea;border:none;}
+
+table.member_table .scroll-wrapper>.scroll-content{height:600px!important;}
+.member_manage .member_left table.member_table{width: calc(100% - 20px);margin:0 auto;table-layout: fixed;}
+table.member_table thead{float:left; width:100%;}
+table.member_table tbody tr{display:table; width:100%;}
+table.member_table tbody{overflow-y:auto; overflow-x:hidden;float:left; width:100%;}
+table.member_table tr td:nth-of-type(1),table.member_table tr th:nth-of-type(1){width:75px;float: left;text-overflow: ellipsis;overflow: hidden;}
+table.member_table tr td:nth-of-type(2),table.member_table tr th:nth-of-type(2){width:54px;float: left;text-overflow: ellipsis;overflow: hidden;}
+table.member_table tr td:nth-of-type(3),table.member_table tr th:nth-of-type(3){width:50px;float: left;text-overflow: ellipsis;overflow: hidden;}
+table.member_table tr td:nth-of-type(4),table.member_table tr th:nth-of-type(4){width:100px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.member_manage .member_right{width: calc(100% - 300px);float: left;}
+.member_right .scroll-wrapper>.scroll-content{height:700px!important;}
+.member_right .line label.member_photo{cursor: pointer;width: 100px;height: 133px;display: block;background: #fff;border:1px solid #b9b9b9;box-sizing: border-box;padding:3px;border-radius:5px;}
+.member_right .line label.member_photo img{display: block;margin:0 auto;width:100%;height:100%;box-sizing: border-box;}
+.member_right .line input[type="file"]{position: absolute;width: 1px;height: 1px;padding:0;margin:-1px;overflow: hidden;clip: rect(0,0,0,0);border:0;z-index: 999999 !important;}
+/**************거래처관리**************/
+/* left */
+.company_manage .company_left{width: 500px;float: left;border-right:1px solid #eaeaea;box-sizing: border-box;height:100%;}
+.company_table .scroll-wrapper>.scroll-content{height:550px!important;}
+.company_table{width: calc(100% - 20px);margin:0 auto;table-layout: fixed;}
+.company_table thead{float:left; width:100%;}
+.company_table tbody tr{display:table; width:100%;}
+.company_table tbody{overflow-y:auto; overflow-x:hidden;float:left; width:100%;float: left;text-overflow: ellipsis;overflow: hidden;}
+.company_table tr td:nth-of-type(1),.company_table tr th:nth-of-type(1){width:180px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.company_table tr td:nth-of-type(2),.company_table tr th:nth-of-type(2){width:80px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.company_table tr td:nth-of-type(3),.company_table tr th:nth-of-type(3){width:100px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.company_table tr td:nth-of-type(4),.company_table tr th:nth-of-type(4){width:119px;float: left;text-overflow: ellipsis;overflow: hidden;}
+/* right */
+.company_right{width: calc(100% - 500px);float: left;box-sizing: border-box;height:100%;}
+.company_right .info_area .left_list,.company_right .info_area .right_list{width: 50%;float: left;box-sizing: border-box;}
+.company_right .info_area .left_list p.black,.company_right .info_area .right_list p.black{font-size: 11px;margin-bottom: 10px;display: inline-block;border:1px solid #555;border-radius: 100px;height:20px;line-height: 20px;padding:0px 5px;}
+.company_right .info_area .left_list .line label,.company_right .info_area .right_list  .line label{width: 45px !important;}
+.company_right .info_area .left_list .line input,.company_right .info_area .right_list .line input,.company_right .info_area .left_list .line .bar_type,.company_right .info_area .right_list .line .bar_type{width: calc(100% - 80px);}
+.company_right .info_area .short_bar_type .short_sp{width:54px!important;}
+.company_right .info_area .short_bar_type li .line{margin:10px 5px 0px!important;}
+.company_right .scroll-wrapper>.scroll-content{height:700px!important;}
+.info_total .address input[type="text"]{width:190px!important;}
+.company_right .file_upload{width:calc(100% - 80px);float:right;box-sizing: border-box;height:30px;border-bottom:1px solid #eaeaea;padding-bottom:5px;}
+.company_right input[type="file"].files{position: absolute;width: 1px;height: 1px;padding:0;margin:-1px;overflow: hidden;clip: rect(0,0,0,0);border:0;}
+.company_right label.filestyle{cursor: pointer;width: 80px !important;height: 22px !important;display: block;background: #272727;color:#ffffff !important;text-align: center;font-size: 12px;float: left;line-height: 22px;float:right;margin-right:10px;border-radius:2px;}
+.company_right label.filestyle::before{content:none;}
+.company_right input.name{width:250px;line-height: 20px;float: left;font-family: 'Nanum Gothic';font-size: 12px;color:#272727;background: #f4f9ff;border:1px solid #d3e7ff;height:22px;text-overflow: ellipsis;appearance: none;-moz-appearance: none;-webkit-appearance: none;padding-left: 5px;box-sizing: border-box;float: left;}
+
+
+.info_area .line input[type="text"]:focus,.info_area .line select:focus,.info_area .line .bar_type li input[type="text"]:focus,.info_area .line input[type="password"]:focus{border: 1px solid #5a95dd;}
+
+
+
+/**************권한관리**************/
+.manage {width: 100%;border-radius: 5px;border:1px solid #eaeaea;background: #fff;box-sizing: border-box;height:100%;}
+.manage .manage_left{width: 300px;box-sizing: border-box;float: left;border-right: 1px solid #eaeaea;height:100%;}
+.manage .search_wrap{float:left;width:100%;border:none!important;}
+.manage_table{width: calc(100% - 20px);box-sizing: border-box;margin:0 auto;table-layout: fixed;}
+.manage_table thead{float:left; width:100%;}
+.manage_table tbody{overflow-y:auto; overflow-x:hidden;float:left; width:100%;}
+.manage_table .scroll-wrapper>.scroll-content{height:490px!important;}
+.manage_table tbody tr{display:table; width:100%;height:30px !important;line-height: 30px;}
+.manage_table tr td:nth-of-type(1),.manage_table tr th:nth-of-type(1){width:130px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_table tr td:nth-of-type(2),.manage_table tr th:nth-of-type(2){width:75px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_table tr td:nth-of-type(3),.manage_table tr th:nth-of-type(3){width:74px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage .manage_center{width: 300px;float: left;box-sizing: border-box;height:100%;}
+.manage .manage_center .title_style h5 span,.manage .manage_right .title_style h5 span{font-size:11px;margin-left:10px;font-weight:400;}
+.manage_check_table{width: calc(100% - 20px);box-sizing: border-box;margin:0 auto;table-layout: fixed;}
+.manage_check_table thead{float:left; width:100%;}
+.manage_check_table tbody{overflow-y:auto; overflow-x:hidden;float:left; width:100%;}
+.manage_check_table .scroll-wrapper>.scroll-content{height:490px!important;}
+.manage_check_table tbody tr{display:table; width:100%;height:30px !important;line-height: 30px;}
+.manage_check_table tr td:nth-of-type(1),.manage_check_table tr th:nth-of-type(1){width:120px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_check_table tr td:nth-of-type(2),.manage_check_table tr th:nth-of-type(2){width:40px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_check_table tr td:nth-of-type(3),.manage_check_table tr th:nth-of-type(3){width:40px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_check_table tr td:nth-of-type(4),.manage_check_table tr th:nth-of-type(4){width:40px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_check_table tr td:nth-of-type(5),.manage_check_table tr th:nth-of-type(5){width:40px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_check_table tr td .check_style{padding:0px 13px;}
+.manage .manage_right{width:calc(100% - 601px);float:left;border-left: 1px solid #eaeaea;height:100%;}
+.manage_detail_table{width: calc(100% - 20px);box-sizing: border-box;margin:0 auto;table-layout: fixed;}
+.manage_detail_table thead{float:left; width:100%;}
+.manage_detail_table tbody{overflow-y:auto; overflow-x:hidden;float:left; width:100%;}
+.manage_detail_table .scroll-wrapper>.scroll-content{height:490px!important;}
+.manage_detail_table tbody tr{display:table; width:100%;height:30px !important;line-height: 30px;}
+.manage_detail_table tr td:nth-of-type(1),.manage_detail_table tr th:nth-of-type(1){width:100px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_detail_table tr td:nth-of-type(2),.manage_detail_table tr th:nth-of-type(2){width:50px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_detail_table tr td:nth-of-type(3),.manage_detail_table tr th:nth-of-type(3){width:50px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_detail_table tr td:nth-of-type(4),.manage_detail_table tr th:nth-of-type(4){width:120px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_detail_table tr td:nth-of-type(5),.manage_detail_table tr th:nth-of-type(5){width:70px;float: left;text-overflow: ellipsis;overflow: hidden;}
+.manage_detail_table tr td:nth-of-type(6),.manage_detail_table tr th:nth-of-type(6){width:50px;float: left;text-overflow: ellipsis;overflow: hidden;}
+
+.manage_detail_table tr select::-ms-expand {display: none;}
+.manage_detail_table tr select{font-family: 'Nanum Gothic';font-size: 12px;color:#272727;border:1px solid #b9b9b9;height:20px;float: left;width:100%;text-overflow: ellipsis;appearance: none;-moz-appearance: none;-webkit-appearance: none;padding-left: 5px;box-sizing: border-box;border-radius:5px;background: transparent url(../images/select_bg.png) no-repeat center right;margin-top:5px;}
+.manage_detail_table tr td input[type="button"].title_btn{height:20px!important;}

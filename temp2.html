@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .main .cont {
+            position: relative;
+            height: 100%;
+        }
+
+        .main_tit01,
+        .main_tit02 {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 250px;
+            line-height: 1;
+            transition: color 0.3s;
+            -webkit-text-stroke: 1px #fff;
+        }
+
+        .main_tit01 {
+            width: 100%;
+            mix-blend-mode: screen;
+            z-index: 3;
+        }
+
+        .main_tit02 {
+            width: 100%;
+            color: #141150;
+            z-index: 1;
+        }
+
+        .photozone {
+            position: absolute;
+            width: 50vw;
+            height: 50vh;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            background-size: 100vw;
+            transition: 0.5s;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .photozone.on {
+            opacity: 0.8;
+            transition: all 1s;
+        }
+
+        .photozone.on::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .photozone video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contents">
+        <div class="stn main">
+            <div class="cont">
+                <div class="main_tit01">
+                    <p>TITLE</p>
+                </div>
+                <div class="main_tit02">
+                    <p>TITLE</p>
+                </div>
+                <div class="photozone">
+                    <video src="" loop autoplay muted playsinline></video>
+                </div>
+            </div>
+        </div>
+        <div class="stn profile main-page"></div>
+    </div>
+</body>
+<script>
+    let num = 0;
+    let idx = 0;
+    let delta;
+    const mainImg = document.querySelector(".photozone");
+    const mainTit = document.querySelector(".main_tit01");
+    const elMainCon = document.querySelectorAll(".main-page");
+
+    $(window).on('mousewheel DOMMouseScroll', function (e) {
+        delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -1;
+        if (delta < 0) {
+            if (!(num == 12)) {
+                num++;
+                if (num <= 11) {
+                    mainImg.style = `width:${(num * 5) + 50}vw; height:${(num * 5) + 50}vh;`;
+                }
+            }
+            if ((num == 12) && (idx < elMainCon.length)) {
+                idx++;
+            }
+        } else {
+            if (!(idx == 0)) {
+                idx--;
+            }
+            if ((num > 0) && (idx == 0)) {
+                num--;
+                mainImg.style = `width:${(num * 5) + 50}vw; height:${(num * 5) + 50}vh;`;
+            }
+        }
+
+        if (num >= 10) {
+            mainTit.style = `color:#fff;`;
+            mainImg.classList.add("on");
+        } else {
+            mainTit.style = `color:#000;`;
+            mainImg.classList.remove("on");
+        }
+
+        $('html,body').stop().animate({
+            scrollTop: ($(window).height()) * idx
+        }, 600)
+    })
+</script>
+
+</html>

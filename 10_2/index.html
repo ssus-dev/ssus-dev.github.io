@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="initial-scale=1.0, width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTS</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pushy.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+<header>
+    <nav class="pushy pushy-right">
+        <div class="pushy-content">
+            <ul>
+                <li class="pushy-link"><a href="index.html">홈</a></li>
+                <li class="pushy-link"><a href="sub_detail.html">상품검색</a></li>
+                <li class="pushy-link"><a href="order_list.html">발주서작성</a></li>
+                <li class="pushy-link"><a href="order_search.html">발주조회</a></li>
+                <li class="pushy-link"><a href="payment_list.html">결제관리</a></li>
+                <li class="pushy-link"><a href="login.html">로그아웃</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div id="container">
+    <button class="menu-btn"></button>
+    <div class="main_visual center">
+        <img src="images/main_logo.png" alt="main_logo" class="logo">
+        <h3 class="main_title black">손 쉽게 주문관리 <i>!</i><br>귀찮고 어려운 발주 관리도 한 번에 <i>!</i></h3>
+    </div>
+    <ul class="main_menu center">
+        <li>
+            <a href="order_list.html">
+                <img src="images/main_icon_01.png" alt="main_icon01">
+                <p class="black">발주서 작성</p>
+            </a>
+        </li>
+        <li>
+            <a href="order_search.html">
+                <img src="images/main_icon_02.png" alt="main_icon01">
+                <p class="black">발주조회</p>
+            </a>
+        </li>
+        <li>
+            <a href="sub_detail.html">
+                <img src="images/main_icon_03.png" alt="main_icon01">
+                <p class="black">상품검색</p>
+            </a>
+        </li>
+        <li>
+            <a href="payment_list.html">
+                <img src="images/main_icon_04.png" alt="main_icon01">
+                <p class="black">결제관리</p>
+            </a>
+        </li>
+    </ul>
+
+    <div class="calendar_wrap center cf">
+        <div class="top_area">
+            <h3 class="blue">Order Calendar</h3>
+            <div class="this_month">
+                <a href="javascript://" data-year="" data-month="" id="prev_month"><img src="images/prev_cal.png" alt="prev_month"></a>
+                <p class="year">2019</p>
+                <p class="month">12</p>
+                <a href="javascript://" data-year="" data-month="" id="next_month"><img src="images/next_cal.png"alt="next_month"></a>
+            </div>
+        </div>
+        <div class="calendar">
+            <ul class="month">
+                <li>
+                    <ul class="week">
+                        <li class="sun">일</li>
+                        <li class="daily">월</li>
+                        <li class="daily">화</li>
+                        <li class="daily">수</li>
+                        <li class="daily">목</li>
+                        <li class="daily">금</li>
+                        <li class="sat">토</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="week">
+                        <li class="sun"></li>
+                        <li class="daily"></li>
+                        <li class="daily"></li>
+                        <li class="daily"></li>
+                        <li class="daily">01</li>
+                        <li class="daily">02</li>
+                        <li class="sat">03</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="week">
+                        <li class="sun">04</li>
+                        <li class="daily">05</li>
+                        <li class="daily">06</li>
+                        <li class="daily bold">07</li>
+                        <li class="daily">08</li>
+                        <li class="daily">09</li>
+                        <li class="sat">10</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="week">
+                        <li class="sun">11</li>
+                        <li class="daily">12</li>
+                        <li class="daily">13</li>
+                        <li class="daily">14</li>
+                        <li class="daily today">
+                            15
+                            <div class="schedule">
+                                <div class="green_bg"></div>
+                                <div class="red_bg"></div>
+                            </div>
+                        </li>
+                        <li class="daily">16</li>
+                        <li class="sat">17</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="week">
+                        <li class="sun">18</li>
+                        <li class="daily">19</li>
+                        <li class="daily">20</li>
+                        <li class="daily">21</li>
+                        <li class="daily">22</li>
+                        <li class="daily">23</li>
+                        <li class="sat">24</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="week">
+                        <li class="sun">25</li>
+                        <li class="daily">26</li>
+                        <li class="daily">27</li>
+                        <li class="daily">28</li>
+                        <li class="daily">29</li>
+                        <li class="daily">30</li>
+                        <li class="sat">31</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="today_list">
+        <li>
+            <a href="">
+                <div class="left red">
+                    <p class="date">15</p>
+                    <p class="day">Thur</p>
+                </div>
+                <div class="right">
+                    <p class="title">항아리솔루션</p>
+                    <p class="sub_text" data-category="발주 : ">항아리 3,000개</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="left green">
+                    <p class="date">15</p>
+                    <p class="day">Thur</p>
+                </div>
+                <div class="right">
+                    <p class="title">항아리솔루션</p>
+                    <p class="sub_text" data-category="발주 : ">항아리 3,000개</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<script src="js/pushy.min.js"></script>
+</body>
+
+</html>

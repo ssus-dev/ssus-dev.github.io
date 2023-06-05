@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>미담건축사무소</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src='js/isotope-docs.min.js'></script>
+    <script src="js/jquery.fullPage.js"></script>
+   
+</head>
+
+<body>
+    <!-- header -->
+    <header class="pc">
+        <ul class="nav">
+            <li>
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </li>
+            <li>
+                <a href="#img2">NEWS</a>
+            </li>
+            <li>
+                <a href="#img3">WORKS</a>
+            </li>
+            <li>
+                <a href="">ABOUT</a>
+                <ul class="sub_menu">
+                    <li class="parent_title"><a href="about.html">ABOUT</a></li>
+                    <li><a href="about.html">회사소개</a></li>
+                    <li><a href="office_history.html">회사개요</a></li>
+                    <li><a href="history.html">임원소개</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="contact.html">CONTACT</a>
+            </li>
+        </ul>
+    </header>
+    <header class="mobile">
+        <div class="mainNav">
+            <button></button>
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+        </div>
+        <div class="sideMenu">
+            <div class="closeArea">
+                <p class="white">MIDAM</p>
+                <img src="img/m_close.png" class="close">
+            </div>
+            <ul class="menuContent">
+                <li><a href="">HOME</a></li>
+                <li><a href="">NEWS</a></li>
+                <li><a href="">WORKS</a></li>
+                <li>
+                    <a href="" class="bigLink">ABOUT <img src="img/m_arrow.png" alt="arrow"></a>
+					<div class="subMenu">
+                        <ul class="">
+                            <li><a href="">ABOUT</a></li>
+                            <li><a href="">회사소개</a></li>
+                            <li><a href="">회사개요</a></li>
+                            <li><a href="">임원소개</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- main_pager -->
+    <ul id="pager">
+        <li data-menuanchor="img1"><a href="#img1"></a></li>
+        <li data-menuanchor="img2"><a href="#img2"></a></li>
+        <li data-menuanchor="img3"><a href="#img3"></a></li>
+        <li data-menuanchor="img4"><a href="#img4"></a></li>
+    </ul>
+
+    <div class="main_contents">
+        <div class="scroll_content main">
+            <ul class="slideList">
+                <li class="fixed_first_content" style="background: url(img/main1_bg.png) center center;">
+                    <a href="index.html">
+                        <div class="main_text">
+                            <h2 class="white">우리의 건축행위를 통해 <br>고객과 이용자가</h2>
+                            <h2 class="point">행복을 느낄 수 있도록</h2>
+                            <img src="img/main_txt.png" alt="arrow_img">
+                        </div>
+                    </a>
+                </li>
+                <!-- 관리자페이지 연동해주시면됩니다 -->
+                <li style="background: url('img/test_bg.png') center center;">
+                    <a href="">
+                        <ul class="text_area">
+                            <li class="title">대치2차 우성아파트 리모델링</li>
+                            <li><span>사업명</span>대치2단지 아파트 리모델링</li>
+                            <li><span>위치</span>서울시 강남구 개포동 12</li>
+                            <li><span>규모</span>지하 3층, 지상 18층</li>
+                            <li><span>세대수</span>1,988 세대</li>
+                            <li><span>연면적</span>256,287.47 ㎡ (77,526.96평)</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+            <script type="text/javascript">
+                $(function () {
+                    $('.slideList').bxSlider({
+                        speed: 800,
+                        pause: 4000,
+                        auto: false,
+                        autoHover: false,
+                        pager: false,
+                        controls: true,
+                    })
+                });
+            </script>
+        </div>
+        <div class="scroll_content news_content">
+            <div class="center_area" id="news">
+                <div class="title_style">
+                    <img src="img/title_line.png" alt="point_line">
+                    <h4 class="white">NEWS</h4>
+                    <p>미담의 새로운 소식을 만나보세요.</p>
+                </div>
+
+                <ul class="slideContents mobile">
+                    <li>
+                        <a href="https://www.naver.com/" style="background: url('img/thumb_test.png') center center;">
+                            <div class="text_wrap">
+                                <p class="tag point">NEWS</p>
+                                <h5 class="title white ellipsis">수지 현대아파트 리모델링 입찰 공모공모공모</h5>
+                                <p class="contents_text white">(세종=뉴스1) 최경환 기자 = 우리나라 주택보급률이 이미 8년전 100%를 넘은 상황에서 통계청이
+                                    아직까지 80%대 보급(세종=뉴스1) 최경환 기자 = 우리나라 주택보급률이 이미 8년전 100%를 넘은 상황에서 통계청이 아직까지 80%대
+                                    보급(세종=뉴스1) 최경환 기자 = 우리나라 주택보급률이 이미 8년전 100%를 넘은 상황에서 통계청이 아직까지 80%대 보급</p>
+                                <p class="date white">2020.06.00</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://blog.naver.com/PostList.nhn?blogId=midamea&from=postList&categoryNo=1"
+                            style="background: url('img/thumb_test.png') center center;">
+                            <div class="text_wrap">
+                                <p class="tag point">NEWS</p>
+                                <h5 class="title white ellipsis">수지 현대아파트 리모델링 입찰 공모공모공모</h5>
+                                <p class="contents_text white">(세종=뉴스1) 최경환 기자 = 우리나라 주택보급률이 이미 8년전 100%를 넘은 상황에서 통계청이
+                                    아직까지 80%대 보급(세종=뉴스1) 최경환 기자 = 우리나라 주택보급률이 이미 8년전 100%를 넘은 상황에서 통계청이 아직까지 80%대
+                                    보급(세종=뉴스1) 최경환 기자 = 우리나라 주택보급률이 이미 8년전 100%를 넘은 상황에서 통계청이 아직까지 80%대 보급</p>
+                                <p class="date white">2020.06.00</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" style="background: url('img/thumb_test.png') center center;">
+                            <div class="text_wrap">
+                                <p class="tag point">NEWS</p>
+                                <h5 class="title white ellipsis">수지 현대아파트 리모델링 입찰 공모공모공모</h5>
+                                <p class="contents_text white">(세종=뉴스1) 최경환 기자 = 우리나라 주택보급률이 이미 8년전 100%를 넘은 상황에서 통계청이
+                                    아직까지 80%대 보급(세종=뉴스1) 최경환 기자 = 우리나라 주택보급률이 이미 8년전 100%를 넘은 상황에서 통계청이 아직까지 80%대
+                                    보급(세종=뉴스1) 최경환 기자 = 우리나라 주택보급률이 이미 8년전 100%를 넘은 상황에서 통계청이 아직까지 80%대 보급</p>
+                                <p class="date white">2020.06.00</p>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+                <script type="text/javascript">
+                    var slidesvar;
+                    $(function () {
+                        if ($(window).width() <= 420) {
+                            slidesvar = 1;
+                        } else {
+                            slidesvar = 3;
+                         }
+                        $('.slideContents').bxSlider({
+                            speed: 800,
+                            pause: 4000,
+                            auto: true,
+                            slideWidth: 440,
+                            slideMargin:35,
+                            minSlides: slidesvar,
+                            maxSlides: slidesvar,
+                            moveSlides: 1,
+                            autoHover: true,
+                            pager: false,
+                            controls: true,
+                        })
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="scroll_content works_content">
+            <div class="center_area">
+                <div class="title_style">
+                    <img src="img/title_line.png" alt="point_line">
+                    <h4 class="black">WORKS</h4>
+                    <p>미담의 사업영역을 소개합니다.</p>
+                </div>
+                <div class="filter_wrap">
+                    <ul class="tab">
+                        <li class="active" data-filter="*" id="all">All</li>
+                        <li data-filter=".Remodeling" id="Remodeling">Remodeling</li>
+                        <li data-filter=".Housing" id="Housing">Housing</li>
+                        <li data-filter=".Etc" id="Etc">Etc.</li>
+                    </ul>
+                </div>
+
+                <ul class="filter_contents">
+                    <!-- li의 클래스명과 p.tag의 컨텐츠명 일치시켜주세요 -->
+                    <li class="Remodeling">
+                        <a href="" style="background: url('img/test1.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">리모델링</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Housing">
+                        <a href="" style="background: url('img/test2.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">하우징</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="Etc">
+                        <a href="" style="background: url('img/test3.png') center center;">
+                            <div class="hover_wrap">
+                                <p class="tag point">기타</p>
+                                <ul>
+                                    <li><span>사 업 명</span>수지현대 아파트 리모델링</li>
+                                    <li><span>위    치</span>용인시 수지구 풍덕천동 700-1</li>
+                                    <li><span>규    모</span>지하2층, 지상15층, 23층</li>
+                                    <li><span>세 대 수</span>1,343 세대</li>
+                                    <li><span>연 면 적</span>236,912.57 ㎡ (71,666.05평)</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <button class="more">MORE</button>
+
+
+            </div>
+        </div>
+        <div class="scroll_content fp-auto-height">
+            <footer>
+                <a href="index.html" class="logo"><img src="img/footer_logo.png" alt="footer_logo"></a>
+                <ul>
+                    <li class="bold">미담 건축 사무소</li>
+                    <li class="mo">서울특별시 서초구 남부순환로 337가길 33 CMC빌딩 201호 (서초동 1434-12)</li>
+                    <li>TEL) 02-521-1712 <img src="img/footer_line.png" alt="line"> FAX) 02-521-1713 </li>
+                    <li class="copyright">Copyright ⓒ 2020 midam architecture. All Rights Reserved.</li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+    <script>
+        $('.main_contents').fullpage({
+            licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+            sectionSelector: '.scroll_content',
+            anchors: ['img1', 'img2', 'img3', 'img4'],
+            menu: '#pager',
+        });
+
+    </script>
+</body>
+
+</html>

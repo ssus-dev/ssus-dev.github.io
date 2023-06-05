@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POTS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/member.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.name').val(input.files[0].name);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+<header>
+    <div class="fix_layout">
+        <h1 class="logo"><a href=""><img src="images/logo_test.png" alt="logo"></a></h1>
+        <div class="today_zone">
+            <p class="name"><span>Today</span> 홍길동</p>
+            <div class="list">
+                <span><img src="images/today_icon01.png" alt="today_icon01">신규거래처</span>
+                <p class="content" data-val="개">15</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon02.png" alt="today_icon02">주문</span>
+                <p class="content" data-val="건">7</p>
+            </div>
+            <div class="list">
+                <span><img src="images/today_icon03.png" alt="today_icon03">금액</span>
+                <p class="content" data-val="원">1,560,000</p>
+            </div>
+        </div>
+        <ul class="menu">
+            <li class="first_depth">
+                <div><img src="images/menu01.png" alt="menu_icon" class="icon">
+                    <p class="title">기본관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="basic_company.html">회사관리</a></li>
+                    <li><a href="basic_product.html">상품관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu02.png" alt="menu_icon" class="icon">
+                    <p class="title">회원관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="member_member.html">직원관리</a></li>
+                    <li><a href="member_company.html">거래처관리</a></li>
+                    <li><a href="member_manager.html">권한관리</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu03.png" alt="menu_icon" class="icon">
+                    <p class="title">전자결재</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="report_sign.html">전자결재</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu04.png" alt="menu_icon" class="icon">
+                    <p class="title">상품관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="goods_add.html">상품등록</a></li>
+                    <li><a href="goods_list.html">상품목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu05.png" alt="menu_icon" class="icon">
+                    <p class="title">발주관리</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="order_manage.html">견적관리</a></li>
+                    <li><a href="order_write.html">견적서작성</a></li>
+                    <li><a href="order_list.html">발주목록</a></li>
+                </ul>
+            </li>
+            <li class="first_depth">
+                <div><img src="images/menu06.png" alt="menu_icon" class="icon">
+                    <p class="title">환경설정</p><img src="images/menu_arrow_down.png" alt="arrow" class="arrow">
+                </div>
+                <ul class="sub_menu">
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="contents">
+    <div class="title_wrap">
+        <h4>사원관리</h4>
+        <input type="button" value="저장하기"/>
+    </div>
+
+    <div class="content_wrap">
+        <div class="company_manage box-shadow">
+            <article class="company_left">
+                <div class="title_style">
+                    <h5>거래처조회</h5>
+                    <input type="button" class="title_btn" value="조회하기"/>
+                </div>
+                <form >
+                    <div class="search_wrap">
+                        <div class="input_wrap">
+                            <div class="input_set">
+                                <label for="search_company">거래처</label>
+                                <input type="text" name="search_company" id="search_company" value="" placeholder="거래처를 입력하세요" />
+                            </div>
+                            <div class="input_set">
+                                <label for="search_president">대표자</label>
+                                <input type="text" name="search_president" id="search_president" value="" placeholder="대표자를 입력하세요" />
+                            </div>
+                            <div class="input_set">
+                                <label for="search_number">사업자번호</label>
+                                <select name="search_number" id="search_number">
+                                    <option value="">사업자번호를 선택하세요</option>
+                                </select>
+                            </div>
+                            <div class="input_set">
+                                <label for="search_sales_id">영업사원</label>
+                                <select name="search_sales_id" id="search_sales_id">
+                                    <option value="">영업사원을 선택하세요</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <table class="company_table">
+                    <thead>
+                    <tr>
+                        <th>상호명</th>
+                        <th>대표자</th>
+                        <th>사업자번호</th>
+                        <th>등록일</th>
+                    </tr>
+                    </thead>
+                    <tbody class="scrollbar-macosx">
+                    <tr>
+                        <td>(주)테스트 기업</td>
+                        <td>강미남</td>
+                        <td>123-56-78985</td>
+                        <td>2017-11-06</td>
+                    </tr>
+                    <tr>
+                        <td>(주)IT 구로디지털단지</td>
+                        <td>강미녀</td>
+                        <td>123-55-78985</td>
+                        <td>2014-11-06</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </article>
+            <form>
+                <input type="hidden" name="id" id="id" />
+                <article class="company_right">
+                    <div class="title_style">
+                        <h5>거래처 정보</h5>
+                        <input type="button" class="title_btn" value="저장하기"/>
+                    </div>
+                    <div class="info_total scrollbar-macosx">
+                        <div class="info_area">
+                            <div class="title_set"><p class="deep_black">거래처 정보</p></div>
+                            <div class="line long_type">
+                                <label for="">사업자 등록번호</label>
+                                <ul class="bar_type">
+                                    <li><input type="text" name="company_number_1" placeholder="3자리" class="middle"></li>
+                                    <li><div class="line"></div></li>
+                                    <li><input type="text" name="company_number_2" placeholder="2자리" class="short"></li>
+                                    <li><div class="line"></div></li>
+                                    <li><input type="text" name="company_number_3" placeholder="5자리" class="long"></li>
+                                </ul>
+                            </div>
+                            <div class="line long_type">
+                                <label for="">법인 등록번호</label>
+                                <ul class="bar_type">
+                                    <li><input type="text" placeholder="법인번호 입력" class="half"></li>
+                                    <li><div class="line"></div></li>
+                                    <li><input type="text" placeholder="법인번호 입력" class="half"></li>
+                                </ul>
+                            </div>
+                            <div class="line long_type">
+                                <label for="">회사명</label>
+                                <input type="text" name="company_name" id="company_name" placeholder="회사명을 입력하세요">
+                            </div>
+                            <div class="line long_type">
+                                <label for="">대표명</label>
+                                <input type="text" name="president" id="president" placeholder="대표명을 입력하세요">
+                            </div>
+                            <div class="line long_type">
+                                <label for="">주소</label>
+                                <div class="address">
+                                    <input type="button" value="검색">
+                                    <input type="hidden" name="post" id="post" readonly />
+                                    <input type="text" name="address1" id="address1" placeholder="기본주소" readonly />
+                                    <input type="text" name="address2" id="address2" placeholder="상세주소" class="add_two">
+                                </div>
+                            </div>
+                            <div class="line long_type">
+                                <label for="">업태</label>
+                                <input type="text" name="item1_name" id="item1_name" placeholder="업태를 입력하세요">
+                            </div>
+                            <div class="line long_type">
+                                <label for="">종목</label>
+                                <input type="text" name="item2_name" id="item2_name" placeholder="종목을 입력하세요">
+                            </div>
+                            <div class="line long_type">
+                                <label for="">TEL</label>
+                                <ul class="bar_type">
+                                    <li>
+                                        <select class="short">
+                                            <option value="010">010</option>
+                                        </select>
+                                    </li>
+                                    <li><div class="line"></div></li>
+                                    <li><input type="text" name="tel_2" id="tel_2" class="short"></li>
+                                    <li><div class="line"></div></li>
+                                    <li><input type="text" name="tel_3" id="tel_3" class="short"></li>
+                                </ul>
+                            </div>
+                            <div class="line long_type">
+                                <label for="">FAX</label>
+                                <ul class="bar_type">
+                                    <li>
+                                        <select class="short">
+                                            <option value="010">010</option>
+                                        </select>
+                                    </li>
+                                    <li><div class="line"></div></li>
+                                    <li><input type="text" name="fax_2" id="fax_2" class="short"></li>
+                                    <li><div class="line"></div></li>
+                                    <li><input type="text" name="fax_3" id="fax_3" class="short"></li>
+                                </ul>
+                            </div>
+                            <div class="line long_type">
+                                <label for="">이메일</label>
+                                <ul class="bar_type">
+                                    <li><input type="text" placeholder="이메일을 입력하세요" class="half" /></li>
+                                    <li class="mail">@</li>
+                                    <li><input type="text" name="email_ad" id="email_ad" class="half" /></li>
+                                    <li>
+                                        <select  class="half">
+                                            <option value="">::선택하세요::</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="line long_type">
+                                <label for="">비밀번호</label>
+                                <input type="password" name="password" id="password" placeholder="비밀번호를 입력하세요" />
+                            </div>
+
+                            <div class="line long_type">
+                                <label for="">서명파일첨부</label>
+                                <div class="file_upload">
+                                    <input type="file" id="thumbnail" name="thumbnail" class="files" onchange="readURL(this);">
+                                    <input class="name" value="파일명" disabled="disabled" >
+                                    <label for="thumbnail" class="filestyle">파일추가</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_area">
+                            <div class="title_set"><p class="deep_black">담당자 정보</p></div>
+                            <div class="left_list">
+                                <p class="black">1.발주 담당자</p>
+                                <div class="line long_type">
+                                    <label for="">담당자</label>
+                                    <input type="text" name="charge_order_name" id="charge_order_name" placeholder="담당자이름을 입력하세요">
+                                </div>
+                                <div class="line">
+                                    <label for="">연락처</label>
+                                    <ul class="bar_type short_bar_type">
+                                        <li>
+                                            <select class="short">
+                                                <option value="010">010</option>
+                                            </select>
+                                        </li>
+                                        <li><div class="line"></div></li>
+                                        <li><input type="text" name="charge_order_tel_2" id="charge_order_tel_2" class="short_sp"></li>
+                                        <li><div class="line"></div></li>
+                                        <li><input type="text" name="charge_order_tel_3" id="charge_order_tel_3" class="short_sp"></li>
+                                    </ul>
+                                </div>
+                                <div class="line">
+                                    <label for="">이메일</label>
+                                    <ul class="bar_type short_bar_type">
+                                        <li><input type="text" name="charge_order_email_id" id="charge_order_email_id" class="short_sp" /></li>
+                                        <li class="mail">@</li>
+                                        <li><input type="text" name="charge_order_email_ad" id="charge_order_email_ad" class="short_sp" /></li>
+                                        <li>
+                                            <select name="charge_order_email_detail" id="charge_order_email_detail" class="short">
+                                                <option value="">::선택하세요::</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right_list">
+                                <p class="black">2.회계 담당자</p>
+                                <div class="line long_type">
+                                    <label for="">담당자</label>
+                                    <input type="text" name="charge_account_name" id="charge_account_name" placeholder="담당자이름을 입력하세요">
+                                </div>
+                                <div class="line long_type">
+                                    <label for="">연락처</label>
+                                    <ul class="bar_type short_bar_type">
+                                        <li>
+                                            <select  class="short_sp">
+                                                <option value="010">010</option>
+                                            </select>
+                                        </li>
+                                        <li><div class="line"></div></li>
+                                        <li><input type="text" name="charge_account_tel_2" id="charge_account_tel_2" class="short_sp"></li>
+                                        <li><div class="line"></div></li>
+                                        <li><input type="text" name="charge_account_tel_3" id="charge_account_tel_3" class="short_sp"></li>
+                                    </ul>
+                                </div>
+                                <div class="line long_type">
+                                    <label for="">이메일</label>
+                                    <ul class="bar_type short_bar_type">
+                                        <li><input type="text" name="charge_account_email_id" id="charge_account_email_id" class="short_sp" /></li>
+                                        <li class="mail">@</li>
+                                        <li><input type="text" name="charge_account_email_ad" id="charge_account_email_ad" class="short_sp" /></li>
+                                        <li>
+                                            <select name="charge_account_email_detail" id="charge_account_email_detail" class="short">
+                                                <option value="">::선택하세요::</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_area">
+                            <div class="title_set"><p class="deep_black">영업사원</p></div>
+                            <div class="line long_type">
+                                <label for="">담당자</label>
+                                <select name="user_account_sales_id" id="user_account_sales_id">
+                                    <option value="">담당자를 선택하세요</option>
+                                </select>
+                            </div>
+                            <div class="line long_type">
+                                <label for="">시작일</label>
+                                <input type="text" name="user_account_sales_start_date" id="user_account_sales_start_date" class="datepicker" placeholder="시작일을 선택하세요" />
+                            </div>
+                        </div>
+                        <div class="bottom_btn_wrap">
+                            <input type="button" value="취소" class="bottom_cancel"/>
+                            <input type="button" value="저장하기" class="bottom_save"/>
+                        </div>
+                    </div>
+                </article>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+
+</html>
